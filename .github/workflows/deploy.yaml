@@ -1,0 +1,52 @@
+name: "Build and deploy"
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    name: "Build"
+    runs-on: ubuntu-22.04
+    environment: github-pages
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            nodejs npm
+      - name: Build frontend
+        run: |
+          export BASEURL=https://yaqwsx.github.io/printer-calculator/
+          npm install --silent
+          NODE_ENV=production PUBLIC_URL=${BASEURL} npm run build
+          touch .nojekyll
+      - name: Tar artifact # Artifact are case insensitive, this is workaround
+        run: tar -czf web_build.tar.gz build/
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: web_build
+          path: web_build.tar.gz
+          retention-days: 14
+  deploy:
+    name: "Deploy"
+    runs-on: ubuntu-20.04
+    needs: build
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout # Required for GH-pages deployment
+        uses: actions/checkout@v2
+      - name: "Download web"
+        uses: actions/download-artifact@v2
+        with:
+          name: web_build
+      - name: Untar artifact
+        run: tar -xzf web_build.tar.gz
+      - name: Deploy to GH Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.0
+        with:
+          branch: gh-pages
+          folder: build
+          single-commit: true
