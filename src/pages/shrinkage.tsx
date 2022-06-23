@@ -78,7 +78,10 @@ export function Shrinkage() {
                 </a>{" "}
                 You can either choose from a stand-alone version to print
                 directly (left) or a mold-pattern if you want to compensate for
-                silicone casting (right).
+                silicone casting (right). You can print the model in any
+                orientation (X/Y) and you should always get the same numbers.
+                Also, print the test piece directly on the build plate without
+                any supports.
             </p>
             <p>
                 Print the model as usual. I advice to add sufficient rest times
