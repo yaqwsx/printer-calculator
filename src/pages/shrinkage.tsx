@@ -167,7 +167,7 @@ export function Shrinkage() {
                     </div>
                     <div className="table-row">
                         <div className="table-cell pr-2 text-right font-bold">
-                            Resin bleeding: 
+                            Exposure bleeding: 
                         </div>
                         <div className="table-cell">
                             <Tooltip

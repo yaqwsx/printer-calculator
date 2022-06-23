@@ -84,8 +84,7 @@ function Footer() {
                         target="_blank"
                     >
                         Tindie store
-                    </a>{" "}
-                    (also see below),
+                    </a>
                 </li>
                 <li>Or you can just share my work!</li>
             </ul>
