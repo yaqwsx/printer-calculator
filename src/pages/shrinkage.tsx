@@ -57,13 +57,18 @@ export function Shrinkage() {
         <>
             <h1>Compensating resin shrinkage</h1>
             <p>
-                When you print on a resin printer, the resin shrinks. That means
-                that if a model in slicer has 50mm it possible that it will only
-                have 49.5mm after it is printed a properly cured. You can read
-                more in the following blog post. This calculator allows you to
-                calculate the resin shrinkage and bleeding based on a printed
-                test piece. You will get two values you can put into the slicer
-                to compensate for it. Just follow the three steps:
+                When resin cures, it shrinks. That means that if a model in
+                slicer has 50 mm it possible that it will only have 49.5 mm
+                after it is printed and properly cured. You can read more in the{" "}
+                <a href="https://blog.honzamrazek.cz/2022/05/getting-perfectly-crisp-and-dimensionally-accurate-3d-prints-on-a-resin-printer-fighting-resin-shrinkage-and-exposure-bleeding">
+                    corresponding blog post.
+                </a>{" "}
+            </p>
+            <p>
+                This calculator allows you to estimate the resin shrinkage and
+                exposure bleeding based on a small printed test piece. You will
+                get two values you can put into the slicer to compensate for it.
+                Just follow the three steps:
             </p>
             <h2>1. Print the test model</h2>
             <p>
@@ -87,19 +92,38 @@ export function Shrinkage() {
             <div className="my-2 flex w-full">
                 <div className="w-1/2 pr-2">
                     <a href="https://www.printables.com/model/230621">
-                        <img src="assets/calib-standalone.png" alt="The test-piece" />
+                        <img
+                            src="assets/calib-standalone.png"
+                            alt="The test-piece"
+                        />
                     </a>
                 </div>
                 <div className="w-1/2 pl-2">
                     <a href="https://www.printables.com/model/230621">
-                        <img src="assets/calib-mold.png" alt="The test-piece mold" />
+                        <img
+                            src="assets/calib-mold.png"
+                            alt="The test-piece mold"
+                        />
                     </a>
                 </div>
             </div>
             <h2>2. Measure it and enter values below:</h2>
+            <p>
+                Tip: you can hover on the measurement name to see an
+                illustration of what to measure. If you would like to also gain
+                extra precision (though, this is not usually needed as 6
+                measurements yield enough information), you can add extra
+                measurements, e.g., between O1 and O2. Use button at the bottom
+                to add extra fields.
+            </p>
             <SamplesForm samples={samples} setSamples={setSamples} />
             <h2>3. Slicer compensation values</h2>
-            {!result && <p>Please fill in all the measurements above to calculate the compensation parameters.</p>}
+            {!result && (
+                <p>
+                    Please fill in all the measurements above to calculate the
+                    compensation parameters.
+                </p>
+            )}
             {warning && (
                 <div className="mb-4 w-full rounded border-2 border-orange-500 bg-orange-200 p-4 text-orange-800">
                     {warning}
@@ -349,7 +373,7 @@ function SamplesForm(props: {
                     )
                 }
             >
-                Add sample for more precision (usually not needed)
+                Add extra measurement sample
             </button>
         </div>
     );

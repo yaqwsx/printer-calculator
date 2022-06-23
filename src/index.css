@@ -30,7 +30,7 @@ h3 {
 }
 
 p {
-  @apply block w-full;
+  @apply block w-full my-2;
 }
 
 a {
