@@ -60,7 +60,7 @@ export function Shrinkage() {
                 When resin cures, it shrinks. That means that if a model in
                 slicer has 50 mm it possible that it will only have 49.5 mm
                 after it is printed and properly cured. You can read more in the{" "}
-                <a href="https://blog.honzamrazek.cz/2022/05/getting-perfectly-crisp-and-dimensionally-accurate-3d-prints-on-a-resin-printer-fighting-resin-shrinkage-and-exposure-bleeding">
+                <a href="https://blog.honzamrazek.cz/2022/06/getting-perfectly-crisp-and-dimensionally-accurate-3d-prints-on-a-resin-printer-fighting-resin-shrinkage-and-exposure-bleeding/">
                     corresponding blog post.
                 </a>{" "}
             </p>
