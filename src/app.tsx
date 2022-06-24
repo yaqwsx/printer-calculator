@@ -109,7 +109,7 @@ function TopMenu() {
                 <Navbar.Link href="https://blog.honzamrazek.cz">
                     My blog
                 </Navbar.Link>
-                <Navbar.Link href="/https://honzamrazek.cz">
+                <Navbar.Link href="https://honzamrazek.cz">
                     About me
                 </Navbar.Link>
             </Navbar.Collapse>
