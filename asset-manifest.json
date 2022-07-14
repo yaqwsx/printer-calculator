@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "https://yaqwsx.github.io/printer-calculator/static/css/main.f5ecbe6f.css",
+    "main.js": "https://yaqwsx.github.io/printer-calculator/static/js/main.1b67ca66.js",
+    "static/js/787.b062e056.chunk.js": "https://yaqwsx.github.io/printer-calculator/static/js/787.b062e056.chunk.js",
+    "index.html": "https://yaqwsx.github.io/printer-calculator/index.html",
+    "main.f5ecbe6f.css.map": "https://yaqwsx.github.io/printer-calculator/static/css/main.f5ecbe6f.css.map",
+    "main.1b67ca66.js.map": "https://yaqwsx.github.io/printer-calculator/static/js/main.1b67ca66.js.map",
+    "787.b062e056.chunk.js.map": "https://yaqwsx.github.io/printer-calculator/static/js/787.b062e056.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f5ecbe6f.css",
+    "static/js/main.1b67ca66.js"
+  ]
+}
