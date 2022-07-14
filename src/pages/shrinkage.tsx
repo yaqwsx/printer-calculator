@@ -227,7 +227,7 @@ export function Shrinkage() {
                                 content={
                                     <>
                                         Set this compensation in slicer. If it
-                                        is less than 0.05 mm, ignore it.
+                                        is less than 0.05 mm, ignore it. Fill in both, inner and outer dimensions the same.
                                         <img
                                             src="assets/tolerance_compensation.png"
                                             className="w-full"
